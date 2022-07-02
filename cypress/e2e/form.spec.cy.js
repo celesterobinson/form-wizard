@@ -46,8 +46,8 @@ describe("wizard", () => {
       });
       cy.get(formFields.prevButton)
         .should('be.disabled');
-      cy.nextPage();
-      cy.prevPage();
+      nextPage();
+      prevPage();
       cy.get(formFields.email)
         .should('have.value', formData.email)
       cy.get(formFields.password)
@@ -58,16 +58,16 @@ describe("wizard", () => {
 
       it("enters and retains personal information", () => {
         cy.visit("http://localhost:3000");
-        cy.nextPage();
+        nextPage();
         cy.contains("Personal Info");
         fillFields({
           [formFields.firstName]: formData.firstName,
           [formFields.lastName]: formData.lastName,
           [formFields.username]: formData.username
         });
-        cy.prevPage();
+        prevPage();
         cy.contains('Sign Up');
-        cy.nextPage();
+        nextPage();
         cy.get(formFields.firstName)
           .should('have.value', formData.firstName)
         cy.get(formFields.lastName)
@@ -78,16 +78,16 @@ describe("wizard", () => {
 
     it("enters and retains other information", () => {
       cy.visit("http://localhost:3000");
-      cy.nextPage();
-      cy.nextPage();
+      nextPage();
+      nextPage();
       cy.contains("Other");
       fillFields({
         [formFields.nationality]: formData.nationality,
         [formFields.other]: formData.other
       });
-      cy.prevPage();
+      prevPage();
       cy.contains('Personal Info');
-      cy.nextPage();
+      nextPage();
       cy.get(formFields.nationality)
         .should('have.value', formData.nationality)
       cy.get(formFields.other)
@@ -101,18 +101,18 @@ describe("wizard", () => {
         [formFields.password]: formData.password,
         [formFields.confirmPassword]: formData.confirmPassword,
       });
-      cy.nextPage();
+      nextPage();
       fillFields({
         [formFields.firstName]: formData.firstName,
         [formFields.lastName]: formData.lastName,
         [formFields.username]: formData.username,
       });
-      cy.nextPage()
+      nextPage()
       fillFields({
         [formFields.nationality]: formData.nationality,
         [formFields.other]: formData.other
       });
-      cy.submitForm();
+      submitForm();
       cy.on('window:alert', (text) => {
         expect(text).to.contain('FORM SUBMITTED')
       });
