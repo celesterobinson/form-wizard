@@ -9,6 +9,7 @@ function PersonalInfo({ formData, onChange }) {
         name="firstName"
         value={formData.firstName}
         onChange={onChange}
+        data-test-id="first-name"
       />
       <input
         type="text"
@@ -16,6 +17,7 @@ function PersonalInfo({ formData, onChange }) {
         name="lastName"
         value={formData.lastName}
         onChange={onChange}
+        data-test-id="last-name"
       />
       <input
         type="text"
@@ -23,6 +25,7 @@ function PersonalInfo({ formData, onChange }) {
         name="username"
         value={formData.username}
         onChange={onChange}
+        data-test-id="username"
       />
     </div>
   );

@@ -57,6 +57,7 @@ function Form() {
               e.preventDefault();
               setPage(page - 1);
             }}
+            data-test-id="prev-button"
           >
             Prev
           </button>
@@ -70,6 +71,7 @@ function Form() {
               }
               setPage(page + 1);
             }}
+            data-test-id="next-button"
           >
             {page === FormTitles.length - 1 ? "Submit" : "Next"}
           </button>

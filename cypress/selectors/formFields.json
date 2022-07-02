@@ -1,0 +1,12 @@
+{
+  "email": "[data-test-id='email']",
+  "password": "[data-test-id='password']",
+  "confirmPassword": "[data-test-id='confirm-password']",
+  "firstName": "[data-test-id='first-name']",
+  "lastName": "[data-test-id='last-name']",
+  "username": "[data-test-id='username']",
+  "nationality": "[data-test-id='nationality']",
+  "other": "[data-test-id='other']",
+  "prevButton": "[data-test-id='prev-button']",
+  "nextButton": "[data-test-id='next-button']"
+}

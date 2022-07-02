@@ -9,6 +9,7 @@ function SignUpInfo({ formData, onChange }) {
         name="email"
         value={formData.email}
         onChange={onChange}
+        data-test-id="email"
       />
       <input
         type="password"
@@ -17,6 +18,7 @@ function SignUpInfo({ formData, onChange }) {
         value={formData.password}
         onChange={onChange}
         autoComplete="on"
+        data-test-id="password"
       />
       <input
         type="password"
@@ -25,6 +27,7 @@ function SignUpInfo({ formData, onChange }) {
         value={formData.confirmPassword}
         onChange={onChange}
         autoComplete="on"
+        data-test-id="confirm-password"
       />
     </div>
   );

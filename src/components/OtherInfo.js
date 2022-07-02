@@ -9,6 +9,7 @@ function OtherInfo({ formData, onChange }) {
         name="nationality"
         value={formData.nationality}
         onChange={onChange}
+        data-test-id="nationality"
       />
       <input
         type="text"
@@ -16,6 +17,7 @@ function OtherInfo({ formData, onChange }) {
         name="other"
         value={formData.other}
         onChange={onChange}
+        data-test-id="other"
       />
     </div>
   );
